@@ -7,11 +7,12 @@
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "typescript": "^4.8.3",
-    "web-vitals": "^2.1.4"
+    "recoil": "^0.7.5",
+    "typescript": "^4.8.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -20,9 +21,11 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
+    "plugins": [
+      "react-hooks"
+    ],
     "extends": [
       "react-app",
-      "react-app/jest",
       "airbnb"
     ],
     "rules": {
@@ -30,6 +33,13 @@
       "import/extensions": [
         "error",
         "never"
+      ],
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": [
+        "warn",
+        {
+          "additionalHooks": "useRecoilCallback"
+        }
       ]
     },
     "settings": {
