@@ -2,7 +2,7 @@ import {
   atom,
 } from 'recoil';
 
-export const textState = atom({
-  key: 'textState',
-  default: '',
+export const todoListAtom = atom<any[]>({
+  key: 'todoList',
+  default: [],
 });
