@@ -30,7 +30,23 @@
       "airbnb"
     ],
     "rules": {
-      "react/jsx-filename-extension": 0
+      "react/jsx-filename-extension": 0,
+      "import/extensions": [
+        "error",
+        "never"
+      ]
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".js",
+            ".jsx",
+            ".ts",
+            ".tsx"
+          ] 
+        }
+      }
     }
   },
   "browserslist": {
